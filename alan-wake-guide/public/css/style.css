@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
-    color: #eee;
+    background: #0a0a0a;
+    color: #e0e0e0;
     min-height: 100vh;
     line-height: 1.6;
 }
@@ -21,37 +21,51 @@ body {
 header {
     text-align: center;
     padding: 40px 20px;
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     border-radius: 10px;
     margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    border: 1px solid #3a3a3a;
+}
+
+.header-logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.9));
 }
 
 header h1 {
     font-size: 3em;
-    color: #e94560;
+    color: #ffffff;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .subtitle {
     font-size: 1.2em;
-    color: #bbb;
+    color: #b0b0b0;
+    letter-spacing: 1px;
 }
 
 .back-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    background: #e94560;
-    color: white;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%);
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: all 0.3s;
+    border: 1px solid #4a4a4a;
+    font-weight: 500;
 }
 
 .back-button:hover {
-    background: #c73652;
+    background: linear-gradient(135deg, #3d3d3d 0%, #505050 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* Main page - Achievement Grid */
@@ -63,82 +77,91 @@ header h1 {
 }
 
 .achievement-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
     border-radius: 10px;
     overflow: hidden;
     display: flex;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 2px solid rgba(233, 69, 96, 0.3);
+    transition: all 0.3s;
+    border: 2px solid #333333;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 .achievement-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(233, 69, 96, 0.3);
-    border-color: #e94560;
+    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.1);
+    border-color: #555555;
+    background: linear-gradient(135deg, #252525 0%, #303030 100%);
 }
 
 .achievement-info {
     flex: 1;
-    padding: 20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .achievement-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    border-right: 2px solid rgba(233, 69, 96, 0.3);
+    border-right: 2px solid #333333;
+    background: #000000;
 }
 
 .achievement-info h3 {
-    color: #e94560;
+    color: #ffffff;
     font-size: 1.5em;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .achievement-info p {
-    color: #ccc;
+    color: #b0b0b0;
     font-size: 0.95em;
+    line-height: 1.6;
 }
 
 .achievement-points {
     display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background: rgba(233, 69, 96, 0.2);
+    margin-top: 12px;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%);
     border-radius: 5px;
     font-size: 0.9em;
-    color: #e94560;
+    color: #ffffff;
     font-weight: bold;
+    border: 1px solid #4a4a4a;
 }
 
 /* Detail page */
 .achievement-detail {
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
     border-radius: 10px;
     overflow: hidden;
-    border: 2px solid rgba(233, 69, 96, 0.3);
+    border: 2px solid #333333;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 .detail-header {
-    background: rgba(233, 69, 96, 0.1);
-    padding: 30px;
+    background: linear-gradient(135deg, #252525 0%, #2d2d2d 100%);
+    padding: 40px;
     text-align: center;
-    border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+    border-bottom: 2px solid #3a3a3a;
 }
 
 .detail-header h2 {
-    color: #e94560;
+    color: #ffffff;
     font-size: 2.5em;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .detail-header p {
     font-size: 1.2em;
-    color: #ccc;
+    color: #b0b0b0;
+    line-height: 1.8;
 }
 
 .detail-content {
@@ -146,32 +169,34 @@ header h1 {
 }
 
 .guide-section {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .guide-section h3 {
-    color: #e94560;
+    color: #ffffff;
     font-size: 1.8em;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+    border-bottom: 2px solid #3a3a3a;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .guide-section p {
     font-size: 1.1em;
     line-height: 1.8;
-    color: #ddd;
+    color: #c0c0c0;
 }
 
 .characters-section {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    padding: 25px;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 25px;
+    border: 1px solid #2a2a2a;
 }
 
 .characters-section h4 {
-    color: #e94560;
+    color: #ffffff;
     margin-bottom: 15px;
     font-size: 1.3em;
 }
@@ -179,31 +204,33 @@ header h1 {
 .character-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 .character-link {
     display: inline-block;
-    padding: 10px 20px;
-    background: rgba(233, 69, 96, 0.2);
-    color: #e94560;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%);
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
-    border: 1px solid rgba(233, 69, 96, 0.4);
+    border: 1px solid #4a4a4a;
     transition: all 0.3s;
+    font-weight: 500;
 }
 
 .character-link:hover {
-    background: rgba(233, 69, 96, 0.4);
-    border-color: #e94560;
+    background: linear-gradient(135deg, #3d3d3d 0%, #505050 100%);
+    border-color: #5a5a5a;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 .loading {
     text-align: center;
     padding: 60px 20px;
     font-size: 1.2em;
-    color: #e94560;
+    color: #b0b0b0;
 }
 
 .error {
@@ -211,20 +238,25 @@ header h1 {
     padding: 60px 20px;
     font-size: 1.2em;
     color: #ff6b6b;
-    background: rgba(255, 107, 107, 0.1);
+    background: linear-gradient(135deg, #1a0f0f 0%, #2a1a1a 100%);
     border-radius: 8px;
+    border: 1px solid #3a2a2a;
 }
 
 footer {
     text-align: center;
     padding: 30px;
-    color: #888;
+    color: #666666;
     margin-top: 40px;
-    border-top: 1px solid rgba(233, 69, 96, 0.2);
+    border-top: 1px solid #2a2a2a;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header-logo {
+        max-width: 280px;
+    }
+
     header h1 {
         font-size: 2em;
     }
@@ -241,7 +273,7 @@ footer {
         width: 100%;
         height: 200px;
         border-right: none;
-        border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+        border-bottom: 2px solid #333333;
     }
 
     .detail-header h2 {

@@ -54,46 +54,60 @@ async function initDatabase() {
 async function insertSampleData() {
   const sampleAchievements = [
     {
+      achievement_id: 'aw_lightbringer',
+      name: 'Light Bringer',
+      description: 'Defeat 50 Taken using only flares',
+      image_url: '/images/achievement-placeholder.png',
+      guide_description: 'This achievement requires you to use flares strategically to defeat enemies. Flares create a protective barrier of light that burns away the darkness possessing the Taken.',
+      how_to_complete: 'Focus on using handheld flares and flare guns rather than your flashlight and firearms. The best locations are Episode 2 and Episode 4 where there are many Taken encounters. Hold the flare until multiple Taken are close, then drop it at your feet or shoot a flare gun into groups. Each Taken killed by the flare light counts toward your total.',
+      characters: JSON.stringify([
+        { name: 'Alan Wake', fandom_url: 'https://alanwake.fandom.com/wiki/Alan_Wake' },
+        { name: 'The Taken', fandom_url: 'https://alanwake.fandom.com/wiki/Taken' }
+      ]),
+      points: 25
+    },
+    {
       achievement_id: 'aw_nightmare',
       name: 'Nightmare Difficulty',
       description: 'Complete the game on Nightmare difficulty',
-      image_url: 'https://via.placeholder.com/150/FF0000/FFFFFF?text=Nightmare',
-      guide_description: 'This is the hardest difficulty in Alan Wake. Enemies are tougher and ammunition is scarce.',
-      how_to_complete: 'Complete all episodes on Nightmare mode. Save ammunition, use flares wisely, and master dodging. Focus on headshots with the revolver for maximum efficiency.',
+      image_url: '/images/achievement-placeholder.png',
+      guide_description: 'This is the hardest difficulty in Alan Wake. Enemies are tougher, deal more damage, and ammunition is extremely scarce. You must be strategic with every resource.',
+      how_to_complete: 'Complete all episodes on Nightmare mode. Master dodging to conserve ammunition. Use environmental hazards whenever possible. Save revolver ammo for Taken that are already weak. Focus on headshots with the hunting rifle. Use flares to crowd control. Consider playing through once on Normal first to learn enemy spawns and collect manuscript pages.',
       characters: JSON.stringify([
         { name: 'Alan Wake', fandom_url: 'https://alanwake.fandom.com/wiki/Alan_Wake' }
       ]),
       points: 50
     },
     {
-      achievement_id: 'aw_collector',
-      name: 'Manuscript Collector',
-      description: 'Collect all manuscript pages',
-      image_url: 'https://via.placeholder.com/150/00FF00/FFFFFF?text=Collector',
-      guide_description: 'Find all 106 manuscript pages scattered throughout the game.',
-      how_to_complete: 'Explore thoroughly, check every building and hidden area. Use a flashlight to reveal hidden pages. Some pages only appear on Nightmare difficulty.',
+      achievement_id: 'aw_manuscript_hunter',
+      name: 'Manuscript Hunter',
+      description: 'Collect all 106 manuscript pages',
+      image_url: '/images/achievement-placeholder.png',
+      guide_description: 'Find all manuscript pages scattered throughout Bright Falls. These pages reveal parts of the story Alan has written, often foreshadowing events you will encounter.',
+      how_to_complete: 'Explore thoroughly every area you visit. Use your flashlight to reveal hidden pages that glow with a golden light. Some pages only appear on Nightmare difficulty. Check buildings, rest stops, lookout points, and off-path locations. Episodes 2, 4, and 5 have the most pages. Keep track of which episodes you need to replay using the Statistics menu.',
       characters: JSON.stringify([
-        { name: 'Thomas Zane', fandom_url: 'https://alanwake.fandom.com/wiki/Thomas_Zane' }
+        { name: 'Thomas Zane', fandom_url: 'https://alanwake.fandom.com/wiki/Thomas_Zane' },
+        { name: 'Barbara Jagger', fandom_url: 'https://alanwake.fandom.com/wiki/Barbara_Jagger' }
       ]),
       points: 30
     },
     {
-      achievement_id: 'aw_coffee',
-      name: 'Coffee Thermos Hunter',
+      achievement_id: 'aw_collector',
+      name: 'The Collector',
       description: 'Find all 100 coffee thermoses',
-      image_url: 'https://via.placeholder.com/150/8B4513/FFFFFF?text=Coffee',
-      guide_description: 'Collect every coffee thermos hidden in the game.',
-      how_to_complete: 'Search off the beaten path, check cabins, rest areas, and lookout points. Use guides to find the trickiest locations. Cannot be done on Nightmare difficulty.',
+      image_url: '/images/achievement-placeholder.png',
+      guide_description: 'Alan needs his coffee! Track down every thermos hidden throughout the game. These collectibles are well-hidden and often in unexpected locations.',
+      how_to_complete: 'Search everywhere: cabins, rest areas, behind objects, on high ledges, and in secluded spots. Use a guide if needed as some thermoses are very difficult to spot. This achievement cannot be completed on Nightmare difficulty as thermoses do not appear in that mode. Best done during a Normal or Hard playthrough.',
       characters: JSON.stringify([]),
       points: 25
     },
     {
       achievement_id: 'aw_signal',
       name: 'Follow the Signal',
-      description: 'Complete The Signal DLC',
-      image_url: 'https://via.placeholder.com/150/FFD700/000000?text=Signal',
-      guide_description: 'Complete the first DLC episode focusing on Alan trapped in a nightmare.',
-      how_to_complete: 'Navigate through surreal environments, fight through waves of Taken, and follow the mysterious television signals to escape.',
+      description: 'Complete The Signal DLC episode',
+      image_url: '/images/achievement-placeholder.png',
+      guide_description: 'The first DLC takes Alan deeper into the nightmare. Reality becomes even more unstable as he struggles to find the way out of the Dark Place.',
+      how_to_complete: 'Navigate through the surreal nightmare environments where objects and locations shift unexpectedly. Fight through waves of Taken while following mysterious television signals. Use words you find to reshape reality and create safe paths. Watch for environmental changes and be ready to adapt your strategy quickly.',
       characters: JSON.stringify([
         { name: 'Alan Wake', fandom_url: 'https://alanwake.fandom.com/wiki/Alan_Wake' },
         { name: 'Thomas Zane', fandom_url: 'https://alanwake.fandom.com/wiki/Thomas_Zane' }
@@ -103,15 +117,37 @@ async function insertSampleData() {
     {
       achievement_id: 'aw_writer',
       name: 'The Writer',
-      description: 'Complete The Writer DLC',
-      image_url: 'https://via.placeholder.com/150/4169E1/FFFFFF?text=Writer',
-      guide_description: 'Complete the second DLC episode and conclude Alan\'s journey.',
-      how_to_complete: 'Use words to reshape reality, defeat Mr. Scratch manifestations, and reach the final confrontation to escape the Dark Place.',
+      description: 'Complete The Writer DLC episode',
+      image_url: '/images/achievement-placeholder.png',
+      guide_description: 'In the final DLC episode, Alan must confront his dark double and find the strength to write his way back to reality.',
+      how_to_complete: 'Use the power of words to manipulate the nightmare world around you. Shine your light on words to make them real and create paths forward. Battle manifestations of Mr. Scratch and face your fears. The final confrontation requires you to embrace your role as a writer and take control of the story.',
       characters: JSON.stringify([
         { name: 'Alan Wake', fandom_url: 'https://alanwake.fandom.com/wiki/Alan_Wake' },
         { name: 'Mr. Scratch', fandom_url: 'https://alanwake.fandom.com/wiki/Mr._Scratch' }
       ]),
       points: 20
+    },
+    {
+      achievement_id: 'aw_boob_tube',
+      name: 'Boob Tube',
+      description: 'Watch every single TV show',
+      image_url: '/images/achievement-placeholder.png',
+      guide_description: 'Find and watch all the Night Springs TV episodes scattered throughout the game. These Twilight Zone-style shows add atmosphere and Easter eggs.',
+      how_to_complete: 'Look for televisions in safe houses, cabins, and other buildings throughout each episode. There are 14 TVs total showing episodes of the fictional show Night Springs. When you find a TV, interact with it and watch the entire episode. Missing even one will require a chapter replay.',
+      characters: JSON.stringify([]),
+      points: 10
+    },
+    {
+      achievement_id: 'aw_paging_mr_wake',
+      name: 'Paging Mr. Wake',
+      description: 'Discover 25 manuscript pages',
+      image_url: '/images/achievement-placeholder.png',
+      guide_description: 'Begin your manuscript collection by finding your first 25 pages. This is a stepping stone toward the full collection.',
+      how_to_complete: 'As you progress through Episodes 1-3, thoroughly explore each area. Manuscript pages emit a golden glow when you shine your flashlight near them. Check buildings, side paths, and elevated areas. This achievement will unlock naturally if you are exploring carefully during your first playthrough.',
+      characters: JSON.stringify([
+        { name: 'Alan Wake', fandom_url: 'https://alanwake.fandom.com/wiki/Alan_Wake' }
+      ]),
+      points: 15
     }
   ];
 
