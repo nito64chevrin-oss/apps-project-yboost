@@ -30,8 +30,13 @@ async function loadAchievements() {
                 >
                 <div class="achievement-info">
                     <h3>${achievement.name}</h3>
-                    <p>${achievement.description || 'No description available'}</p>
-                    ${achievement.points ? `<span class="achievement-points">${achievement.points} points</span>` : ''}
+                    ${achievement.description ? `<p>${achievement.description}</p>` : ''}
+                </div>
+                <div class="achievement-difficulty">
+                    ${achievement.difficulty || 'Easy'}
+                </div>
+                <div class="achievement-percentage">
+                    ${achievement.percentage || '0'}%
                 </div>
             </div>
         `).join('');
